@@ -105,7 +105,7 @@
 
     p {
       color: var(--color-navy-light);
-      font-size: 15px;
+      font-size: 17px; /* Increased from 15px */
     }
 
     a {
@@ -216,13 +216,14 @@
     }
 
     .btn-navy {
-      background-color: var(--color-navy-base);
-      color: var(--color-white);
+      background-color: var(--color-navy-base) !important;
+      color: #FFFFFF !important;
       box-shadow: 0 4px 15px rgba(8, 18, 32, 0.12);
     }
 
     .btn-navy:hover {
-      background-color: var(--color-navy-mid);
+      background-color: var(--color-navy-mid) !important;
+      color: #FFFFFF !important;
       transform: translateY(-2px);
       box-shadow: 0 8px 24px rgba(8, 18, 32, 0.2);
     }
@@ -243,10 +244,14 @@
     }
 
     header.scrolled {
-      padding: 14px 0;
+      padding: 10px 0;
       background: rgba(255, 255, 255, 0.98);
       border-bottom-color: rgba(197, 160, 89, 0.2);
       box-shadow: 0 10px 30px rgba(8, 18, 32, 0.03);
+    }
+
+    header.scrolled .logo-container img {
+      height: 56px; /* Shrinks on scroll */
     }
 
     .nav-wrapper {
@@ -256,10 +261,10 @@
     }
 
     .logo-container img {
-      height: 52px;
+      height: 68px; /* Increased from 52px */
       width: auto;
       display: block;
-      transition: transform var(--transition-normal);
+      transition: transform var(--transition-normal), height var(--transition-normal);
     }
 
     .logo-container:hover img {
@@ -564,8 +569,8 @@
     }
 
     .panel-icon-box {
-      width: 38px;
-      height: 38px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       background: rgba(197, 160, 89, 0.1);
       display: flex;
@@ -573,21 +578,21 @@
       justify-content: center;
       color: var(--color-gold-dark);
       font-family: var(--font-condensed);
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 700;
       flex-shrink: 0;
     }
 
     .panel-info h4 {
       font-family: var(--font-sans);
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 700;
       color: var(--color-navy-base);
       margin-bottom: 2px;
     }
 
     .panel-info p {
-      font-size: 12px;
+      font-size: 14px;
       color: var(--color-navy-light);
     }
 
@@ -627,7 +632,7 @@
 
     .stat-lbl {
       font-family: var(--font-condensed);
-      font-size: 11px;
+      font-size: 13px; /* Increased from 11px */
       font-weight: 600;
       color: var(--color-navy-light);
       letter-spacing: 2px;
@@ -719,7 +724,7 @@
     }
 
     .section-header p.lead {
-      font-size: 17px;
+      font-size: 19px; /* Increased from 17px */
       line-height: 1.8;
       color: var(--color-navy-light);
     }
@@ -789,7 +794,7 @@
 
     .waste-tag {
       font-family: var(--font-condensed);
-      font-size: 11px;
+      font-size: 12px; /* Increased from 11px */
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -802,14 +807,14 @@
     }
 
     .waste-audit-card h4 {
-      font-size: 20px;
+      font-size: 22px; /* Increased from 20px */
       font-weight: 700;
       margin-bottom: 14px;
       color: var(--color-navy-base);
     }
 
     .waste-audit-card p {
-      font-size: 14px;
+      font-size: 16px; /* Increased from 14px */
       color: var(--color-navy-light);
       margin-bottom: 24px;
     }
@@ -824,13 +829,13 @@
 
     .ratio-num {
       font-family: var(--font-serif);
-      font-size: 32px;
+      font-size: 36px; /* Increased from 32px */
       font-weight: 700;
       color: var(--color-gold-dark);
     }
 
     .ratio-lbl {
-      font-size: 12px;
+      font-size: 14px; /* Increased from 12px */
       font-weight: 500;
       color: var(--color-navy-light);
       line-height: 1.4;
@@ -861,7 +866,7 @@
 
     .why-num {
       font-family: var(--font-condensed);
-      font-size: 12px;
+      font-size: 13px; /* Increased from 12px */
       font-weight: 700;
       color: var(--color-gold-dark);
       letter-spacing: 2px;
@@ -869,14 +874,14 @@
     }
 
     .why-feature-card h4 {
-      font-size: 18px;
+      font-size: 20px; /* Increased from 18px */
       font-weight: 700;
       margin-bottom: 8px;
       color: var(--color-navy-base);
     }
 
     .why-feature-card p {
-      font-size: 14px;
+      font-size: 16px; /* Increased from 14px */
       color: var(--color-navy-light);
     }
 
@@ -956,7 +961,7 @@
     }
 
     .service-card p {
-      font-size: 13.5px;
+      font-size: 15px; /* Increased from 13.5px */
       line-height: 1.7;
       margin-bottom: 24px;
       color: var(--color-navy-light);
@@ -973,7 +978,7 @@
     }
 
     .service-list-item {
-      font-size: 12.5px;
+      font-size: 14.5px; /* Increased from 12.5px */
       color: var(--color-navy-light);
       display: flex;
       align-items: flex-start;
@@ -1091,7 +1096,7 @@
     }
 
     .crew-card p {
-      font-size: 12.5px;
+      font-size: 14.5px; /* Increased from 12.5px */
       line-height: 1.6;
       color: var(--color-navy-light);
     }
@@ -1194,7 +1199,7 @@
     }
 
     .timeline-step p {
-      font-size: 13.5px;
+      font-size: 15px; /* Increased from 13.5px */
       color: var(--color-navy-light);
       line-height: 1.6;
     }
@@ -1269,7 +1274,7 @@
 
     .p-cat {
       font-family: var(--font-condensed);
-      font-size: 10px;
+      font-size: 11px; /* Increased from 10px */
       font-weight: 600;
       color: var(--color-gold-dark);
       text-transform: uppercase;
@@ -1280,7 +1285,7 @@
     }
 
     .p-country {
-      font-size: 11px;
+      font-size: 13px; /* Increased from 11px */
       color: var(--color-navy-light);
       font-weight: 500;
       letter-spacing: 0.5px;
@@ -1288,7 +1293,7 @@
 
     .p-name {
       font-family: var(--font-serif);
-      font-size: 16px;
+      font-size: 18px; /* Increased from 16px */
       font-weight: 700;
       color: var(--color-navy-base);
       line-height: 1.35;
