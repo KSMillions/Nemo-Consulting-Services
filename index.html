@@ -1776,6 +1776,184 @@
     .d-300 { transition-delay: 0.3s; }
     .d-400 { transition-delay: 0.4s; }
 
+    /* ─── SECTION: HOW IT WORKS ─── */
+    #how-it-works {
+      background-color: var(--color-bg-primary);
+    }
+
+    .how-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .how-intro-visual {
+      position: relative;
+    }
+
+    .how-intro-badge {
+      background: linear-gradient(135deg, var(--color-gold-dark) 0%, var(--color-gold-base) 100%);
+      border-radius: var(--border-radius-xl);
+      padding: 48px 44px;
+      color: #FFFFFF;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .how-intro-badge::before {
+      content: '"';
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      font-size: 180px;
+      font-family: var(--font-serif);
+      color: rgba(255,255,255,0.07);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .how-intro-badge blockquote {
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 2.5vw, 28px);
+      font-weight: 600;
+      line-height: 1.45;
+      color: #fff;
+      margin-bottom: 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .how-intro-badge .quote-attr {
+      font-family: var(--font-condensed);
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      position: relative;
+      z-index: 1;
+    }
+
+    .how-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .how-step-card {
+      background: var(--color-bg-primary);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--border-radius-lg);
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+      box-shadow: 0 8px 24px var(--color-shadow-light);
+    }
+
+    .how-step-card:hover {
+      border-color: var(--color-border-hover);
+      box-shadow: 0 20px 40px var(--color-shadow-medium);
+      transform: translateY(-4px);
+    }
+
+    .how-step-number {
+      font-family: var(--font-serif);
+      font-size: 64px;
+      font-weight: 700;
+      color: rgba(197, 160, 89, 0.1);
+      line-height: 1;
+      position: absolute;
+      top: 16px;
+      right: 20px;
+    }
+
+    .how-step-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--color-gold-dim);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--border-radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      color: var(--color-gold-dark);
+    }
+
+    .how-step-card h4 {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-navy-base);
+      margin-bottom: 14px;
+    }
+
+    .how-step-card p {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--color-navy-light);
+    }
+
+    .how-flex-callout {
+      margin-top: 60px;
+      background: var(--color-bg-secondary);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--border-radius-xl);
+      padding: 48px 52px;
+      display: flex;
+      align-items: center;
+      gap: 52px;
+    }
+
+    .how-flex-icon {
+      width: 80px;
+      height: 80px;
+      min-width: 80px;
+      background: var(--color-gold-dim);
+      border: 1px solid var(--color-border-hover);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-gold-dark);
+    }
+
+    .how-flex-text h3 {
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--color-navy-base);
+    }
+
+    .how-flex-text h3 em {
+      font-style: normal;
+      color: var(--color-gold-dark);
+    }
+
+    .how-flex-text p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--color-navy-light);
+      max-width: 640px;
+    }
+
+    @media (max-width: 991px) {
+      .how-intro {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .how-steps-grid {
+        grid-template-columns: 1fr;
+      }
+      .how-flex-callout {
+        flex-direction: column;
+        gap: 28px;
+        padding: 36px 28px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1843,7 +2021,7 @@
         </div>
         
         <h1 class="hero-title">
-          Architecting Site Execution 
+          Construction Expert Specialists
           <span>Across Africa</span>
         </h1>
         
@@ -2008,6 +2186,99 @@
           <p>Active across South Africa, Namibia, Botswana, and Zambia. We understand regional compliance, local trades, and logistical challenges.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION: HOW IT WORKS ─── -->
+  <section id="how-it-works">
+    <!-- Monogram Watermark -->
+    <div class="monogram-bg" style="top: 15%; right: -5%;">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 15 L32 15 L32 85 L15 85 Z" fill="#081220" />
+        <path d="M32 15 L60 55 L60 85 L32 45 Z" fill="#3D4E68" />
+        <path d="M68 85 L40 45 L40 15 L68 55 Z" fill="#8C6E33" />
+        <path d="M68 15 L85 15 L85 85 L68 85 Z" fill="#C5A059" />
+      </svg>
+    </div>
+
+    <div class="container">
+
+      <!-- Intro Split -->
+      <div class="how-intro">
+        <div class="reveal">
+          <span class="section-tag">Client-Centred Approach</span>
+          <div class="section-header" style="margin-bottom: 0;">
+            <h2>Your Project.<br><em>Our Execution.</em></h2>
+            <p class="lead" style="margin-top: 20px;">
+              Hand us a full project or a single package of work. Either way, Nemo's specialists step in, execute on the ground, and report up the chain — so you remain in control at the management level without carrying the supervisory burden.
+            </p>
+          </div>
+        </div>
+
+        <div class="how-intro-visual reveal d-200">
+          <div class="how-intro-badge">
+            <blockquote>"Hand us the project or a portion of it — we execute. You manage the process."</blockquote>
+            <span class="quote-attr">— The Nemo Promise</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Three-Step Process -->
+      <div class="how-steps-grid">
+        <div class="how-step-card reveal">
+          <span class="how-step-number">01</span>
+          <div class="how-step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
+              <rect x="9" y="3" width="6" height="4" rx="1" ry="1"/>
+              <path d="M9 12h6M9 16h4"/>
+            </svg>
+          </div>
+          <h4>Define the Scope</h4>
+          <p>Assign us a full project or a specific portion — civil works, finishing, wet trades, or any specialist package. We align with your programme and deliverables from day one.</p>
+        </div>
+
+        <div class="how-step-card reveal d-200">
+          <span class="how-step-number">02</span>
+          <div class="how-step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h4>We Deploy &amp; Execute</h4>
+          <p>Nemo mobilises the right foremen, supervisors, and trade specialists to site — typically within 5 days. Our team owns the on-the-ground execution and holds the trades accountable to your drawings.</p>
+        </div>
+
+        <div class="how-step-card reveal d-300">
+          <span class="how-step-number">03</span>
+          <div class="how-step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h4>You Manage the Process</h4>
+          <p>You retain full programme oversight and client-facing accountability. We feed you structured progress reports so your management layer stays informed without being buried in operational detail.</p>
+        </div>
+      </div>
+
+      <!-- Flexibility Callout -->
+      <div class="how-flex-callout reveal">
+        <div class="how-flex-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="how-flex-text">
+          <h3>Full Project or <em>Partial Package</em> — We Flex to Fit</h3>
+          <p>
+            No engagement is too large or too targeted. Nemo operates as a modular execution partner: plug us into a single trade package, a phase of works, or hand us the entire site programme. Our managed supervision model scales to match the complexity of your project, giving you expert boots on the ground wherever and whenever you need them.
+          </p>
+        </div>
+      </div>
+
     </div>
   </section>
 
